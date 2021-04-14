@@ -655,7 +655,7 @@ def test_bootstrap4_form_inline():
     html = render_crispy_form(form)
     assert html.count('class="form-inline"') == 1
     assert html.count('class="input-group"') == 3
-    assert html.count('<label for="id_email" class="sr-only') == 1
+    assert html.count('<label id="id_email_label" for="id_email" class="sr-only') == 1
     assert html.count('id="div_id_email" class="input-group"') == 1
     assert html.count('placeholder="email"') == 1
     assert html.count("</label> <input") == 3
